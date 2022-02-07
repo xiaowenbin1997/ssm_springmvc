@@ -11,9 +11,7 @@ public class MyTest01 {
     public void myTest01() {
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
         ProvinceDao provinceDao = sqlSession.getMapper(ProvinceDao.class);
-        List<Province> provinces = provinceDao.searchProvince(1);
-        for (Province province : provinces) {
-            System.out.println(province);
-        }
+        String province = provinceDao.searchProName(1);
+        System.out.println(province);
     }
 }

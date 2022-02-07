@@ -18,7 +18,7 @@
                 <!--数据库的驱动类名-->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <!--连接数据库的url字符串-->
-                <property name="url" value="jdbc:mysql://localhost:3306/bjpowernode"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/ssmtest"/>
                 <!--访问数据库的用户名-->
                 <property name="username" value="root"/>
                 <!--密码-->

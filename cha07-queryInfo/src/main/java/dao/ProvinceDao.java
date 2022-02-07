@@ -5,5 +5,6 @@ import entity.Province;
 import java.util.List;
 
 public interface ProvinceDao {
-    public List<Province> searchProvince(Integer id);
+    public Province searchProvince(Integer id);
+    public String searchProName(Integer id);
 }

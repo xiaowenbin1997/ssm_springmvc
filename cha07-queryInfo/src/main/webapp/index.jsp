@@ -8,36 +8,45 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>局部刷新-ajax</title>
+    <title>ajax根据省份id获取名称</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
     <script type="text/javascript">
-        var xmlHttp = new XMLHttpRequest();
-        function doAjax(){
+        function search() {
+            //发起ajax请求，传递参数给服务器， 服务器返回数据
+            //1.创建异步对象
+            var  xmlHttp  = new XMLHttpRequest();
+            //2.绑定事件
             xmlHttp.onreadystatechange = function () {
-                //alert("==readyState属性值==" + xmlHttp.readyState + "==status:" + xmlHttp.status)
-                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-                    var data = xmlHttp.responseText;
-                    document.getElementById("mydata").innerText = data;
+                if( xmlHttp.readyState == 4 && xmlHttp.status== 200){
+                    // alert(xmlHttp.responseText)
+                    //更新页面，就是更新dom对象
+                    document.getElementById("proname").value= xmlHttp.responseText;
                 }
             }
-            var name = document.getElementById("name").value
-            var height = document.getElementById("height").value
-            var weight = document.getElementById("weight").value
-            var param = "name=" + name + "&w="+ weight +"&h=" + height;
-            xmlHttp.open("get","bmiAjax?"+param,true);
-            xmlHttp.send()
-    }
+            //3.初始异步对象
+            //获取proid文本框的值
+            var proid = document.getElementById("proid").value;
+            xmlHttp.open("get","queryProvince?proid="+proid,true);
+
+            //4.发送请求
+            xmlHttp.send();
+        }
     </script>
 </head>
 <body>
-    <p>局部刷新ajax-计算bmi</p>
-    <div>
-        姓名：<input type="text" id="name"/><br/>
-        身高：<input type="text" id="height"/><br/>
-        体重：<input type="text" id="weight"/><br/>
-        <input type="button" value="计算bmi" onclick="doAjax()">
-        <br/>
-        <br/>
-        <div id="mydata">等待加载数据...</div>
-    </div>
+<p>ajax根据省份id获取名称</p>
+<table>
+    <tr>
+        <td>省份编号：</td>
+        <td><input type="text" id="proid"/>
+            <input type="button" value="搜索" onclick="search()" />
+        </td>
+    </tr>
+    <tr>
+        <td>省份名称：</td>
+        <td><input type="text" id="proname" /></td>
+    </tr>
+</table>
 </body>
+<a href="html/main.jsp">link</a>
 </html>
