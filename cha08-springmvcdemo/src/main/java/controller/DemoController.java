@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 @Controller
-@RequestMapping("/demo")
+@RequestMapping("/cha09/demo")
 public class DemoController {
     @RequestMapping("/handle02")
     public ModelAndView handle02(HttpServletRequest request, HttpServletResponse response) {
