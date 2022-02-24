@@ -9,15 +9,15 @@
                 //alert("button click");
                 $.ajax({
                     //url:"returnVoid-ajax.do",
-                    //url:"returnStudentJsonArray.do",
-                    url:"returnStringData.do",
+                    url:"returnStudentJsonArray.do",
+                    // url:"returnStringData.do",
                     data:{
                         name:"zhangsan",
                         age:20
                     },
                     type:"post",
-                    dataType:"text",
-                    //dataType:"json",
+                    // dataType:"text",
+                    dataType:"json",
                     success:function(resp){
                         //resp从服务器端返回的是json格式的字符串 {"name":"zhangsan","age":20}
                         //jquery会把字符串转为json对象， 赋值给resp形参。
@@ -28,7 +28,11 @@
                         /*$.each(resp,function(i,n){
                             alert(n.name+"   "+n.age)
                         })*/
-                        alert("返回的是文本数据："+resp);
+                        // alert("name = " + resp.name+"age = "+resp.age)
+                        // alert("返回的是文本数据："+resp);
+                        $.each(resp,function (i,n){
+                            alert(n.name + " " + n.age)
+                        })
                     }
                 })
             })
