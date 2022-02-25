@@ -6,17 +6,17 @@
     <script type="text/javascript">
         $(function(){
             $("button").click(function(){
-                //alert("button click");
+                alert("button click");
                 $.ajax({
-                    //url:"returnVoid-ajax.do",
+                    url:"returnVoid-ajax.do",
                     //url:"returnStudentJsonArray.do",
-                    url:"returnStringData.do",
+                    // url:"returnStringData.do",
                     data:{
                         name:"zhangsan",
                         age:20
                     },
                     type:"post",
-                    dataType:"text",
+                    dataType:"json",
                     //dataType:"json",
                     success:function(resp){
                         //resp从服务器端返回的是json格式的字符串 {"name":"zhangsan","age":20}
@@ -28,7 +28,8 @@
                         /*$.each(resp,function(i,n){
                             alert(n.name+"   "+n.age)
                         })*/
-                        alert("返回的是文本数据："+resp);
+                        // alert("返回的是文本数据："+resp);
+                        alert("resp:" + resp.name + ",age:" +resp.age);
                     }
                 })
             })
