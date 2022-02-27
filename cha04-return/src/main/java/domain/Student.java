@@ -7,7 +7,7 @@ public class Student {
     private Integer age;
 
     public Student() {
-        System.out.println("student的无参构造");
+        System.out.println("student-init:no params 啊");
     }
 
     public String getName() {
@@ -15,12 +15,12 @@ public class Student {
     }
 
     public void setName(String name) {
-        System.out.println("student的setName设置");
+        System.out.println("student-setName 啊");
         this.name = name;
     }
 
     public Integer getAge() {
-        System.out.println("student的setAge设置");
+        System.out.println("student-setAge 啊");
         return age;
     }
 
