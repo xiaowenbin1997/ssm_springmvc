@@ -36,4 +36,10 @@ public class MyController {
         studentList.add(student02);
         return studentList;
     }
+
+    @RequestMapping(value = "/returnStringData.do",produces = "text/plain;charset=utf-8")
+    @ResponseBody//不是返回视图名，而是返回字符串对象
+    public String returnStringData(String name,Integer age) {
+        return "hello springmvc 返回字符串";
+    }
 }

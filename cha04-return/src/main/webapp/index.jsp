@@ -53,6 +53,12 @@
     年龄：<input type="text" name="age"> <br/>
     <input type="submit" value="提交参数">
 </form>
+<p>处理器方法返回String表示数据</p>
+<form action="/returnStringData.do" method="post">
+    姓名：<input type="text" name="name"> <br/>
+    年龄：<input type="text" name="age"> <br/>
+    <input type="submit" value="提交参数">
+</form>
 <br/>
 <br/>
 <button id="btn">发起ajax请求</button>
