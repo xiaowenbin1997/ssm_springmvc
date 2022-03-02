@@ -7,12 +7,11 @@
 
     <!--springmvc配置文件， 声明controller和其它web相关的对象-->
     <context:component-scan base-package="controller"/>
-
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
+    <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
     <!--
       1. 响应ajax请求，返回json
