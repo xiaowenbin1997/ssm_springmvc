@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cha11-ssm.iml" filepath="$PROJECT_DIR$/cha11-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cha11-forward-redirect/cha12-forward-redirect.iml" filepath="$PROJECT_DIR$/../cha11-forward-redirect/cha12-forward-redirect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cha12-redirect-forward/cha12-redirect-forward.iml" filepath="$PROJECT_DIR$/../cha12-redirect-forward/cha12-redirect-forward.iml" />
+    </modules>
+  </component>
+</project>
