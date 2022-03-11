@@ -14,7 +14,8 @@ public class MyInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("preHandler01");
-        return true;
+        request.getRequestDispatcher("tips.jsp").forward(request,response);
+        return false;
     }
 
     @Override
